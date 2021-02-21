@@ -63,19 +63,17 @@ export default class App extends Component {
 
     return (
       <div>
-        <h1>Phonebook</h1>
+        <h1>PHOONEBOOK</h1>
 
         <ContactForm onAddContact={this.addContact} />
         <h2>Contacts</h2>
-        {visibleContacts.length > 1 && (
-          <Filter value={filter} onChangeFilter={this.changeFilter} />
-        )}
-        {visibleContacts.length > 0 && (
-          <ContactList
-            contacts={visibleContacts}
-            onRemoveContact={this.removeContact}
-          />
-        )}
+
+        <Filter value={filter} onChangeFilter={this.changeFilter} />
+
+        <ContactList
+          contacts={visibleContacts}
+          onRemoveContact={this.removeContact}
+        />
       </div>
     );
   }
